@@ -1,0 +1,77 @@
+/*
+ ============================================================================
+ Name        : write_textfile.c
+ Author      : soniya shinde
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ fread() and fwrite()-binary file
+ fprintf() and fscanf()-text file
+ fgets(),fputs(),fgetc(),fputc()-text file
+
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+
+	//------------write mode------
+	/*char str[10];
+	int n;
+	FILE *fp=NULL;
+	fp=fopen("demo1.txt","w");
+	if(fp==NULL)
+	{
+		printf("Error to open file");
+
+	}
+	else
+	{
+		printf("\n Enter String to write :");
+		scanf("%s",&str);
+		//gets(str);
+	     printf("%s",str);
+		n=fwrite(str,sizeof(char *),1,fp);
+		if(n>0)
+			printf("data write successfully");
+		else
+			printf("fail to write");
+
+	}*/
+
+
+
+	//------------append mode------
+		char str[10];
+		char str2[1]={'\n'};
+
+		int n;
+		FILE *fp=NULL;
+		fp=fopen("demo2.txt","a");
+		if(fp==NULL)
+		{
+			printf("Error to open file");
+
+		}
+		else
+		{
+			printf("\n Enter String to write :");
+			scanf("%s",&str);
+			//gets(str);
+		     printf("%s",str+str2[0]);
+		  //   str2=strcat(str,'\n');
+			//n=fputs(str,fp);
+			n=fprintf(fp,str);
+
+			if(n>0)
+				printf("data write successfully");
+			else
+				printf("fail to write");
+
+		}
+
+	return EXIT_SUCCESS;
+}

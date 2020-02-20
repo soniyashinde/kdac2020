@@ -1,0 +1,52 @@
+qsort()--stdlib.h
+
+qsort() prototype
+
+void qsort (void* base, size_t num, size_t size, int (*compare)(const void*,const void*)); 
+
+The qsort() function sorts the given array pointed by base in ascending order. The array contains num elements, each of size bytes.
+
+The function pointed by compare is used to compare two elements of the array. This function modifies the content of the array itself in the ascending order.
+
+
+qsort() Parameters
+
+base: Pointer to the first element of the array to sort
+num: Number of element in the array
+size: Size in bytes of each element in the array
+compare: A pointer to a function that that compares two elements. It returns
+a negative integer if the first argument is less than the second
+a positive integer if the first argument is greater than the second
+zero if both arguments are equal
+The prototype of the comparison function looks like:
+
+int compare(const void* a, const void* b);
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int values[] = { 88, 56, 100, 2, 25 };
+
+int cmpfunc (const void * a, const void * b) {
+   return ( *(int*)a - *(int*)b );
+}
+
+int main () {
+   int n;
+
+   printf("Before sorting the list is: \n");
+   for( n = 0 ; n < 5; n++ ) {
+      printf("%d ", values[n]);
+   }
+
+   qsort(values, 5, sizeof(int), cmpfunc);
+
+   printf("\nAfter sorting the list is: \n");
+   for( n = 0 ; n < 5; n++ ) {   
+      printf("%d ", values[n]);
+   }
+  
+   return(0);
+}
