@@ -1,44 +1,98 @@
-11:48:46 **** Incremental Build of configuration Debug for project write_textfile ****
+13:38:22 **** Incremental Build of configuration Debug for project Student_hackathon ****
 make all 
-Building file: ../src/write_textfile.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/write_textfile.d" -MT"src/write_textfile.o" -o "src/write_textfile.o" "../src/write_textfile.c"
-../src/write_textfile.c: In function ‘main1’:
-../src/write_textfile.c:36:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[10]’ [-Wformat=]
-   scanf("%s",&str);
-          ~^  ~~~~
-../src/write_textfile.c: In function ‘main’:
-../src/write_textfile.c:72:12: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[10]’ [-Wformat=]
-    scanf("%s",&str);
-           ~^  ~~~~
-../src/write_textfile.c:74:9: warning: implicit declaration of function ‘strcat’ [-Wimplicit-function-declaration]
-    str2=strcat(str,"\n");
-         ^~~~~~
-../src/write_textfile.c:74:9: warning: incompatible implicit declaration of built-in function ‘strcat’
-../src/write_textfile.c:74:9: note: include ‘<string.h>’ or provide a declaration of ‘strcat’
-../src/write_textfile.c:93:7: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
-   str2=fgetc(fp);
-       ^
-../src/write_textfile.c:94:14: warning: comparison between pointer and integer
-   while(str2 != -1)
-              ^~
-../src/write_textfile.c:96:13: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
-    printf("%c",str2);
-            ~^
-            %s
-../src/write_textfile.c:97:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
-    str2=fgetc(fp);
-        ^
-../src/write_textfile.c:60:15: warning: unused variable ‘fname’ [-Wunused-variable]
-         char *fname;
-               ^~~~~
-Finished building: ../src/write_textfile.c
+Building file: ../src/Student_hackathon.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Student_hackathon.d" -MT"src/Student_hackathon.o" -o "src/Student_hackathon.o" "../src/Student_hackathon.c"
+../src/Student_hackathon.c: In function ‘Register_customer’:
+../src/Student_hackathon.c:55:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
+   scanf("%s",&c.name);
+          ~^  ~~~~~~~
+../src/Student_hackathon.c:57:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
+   scanf("%s",&c.address);
+          ~^  ~~~~~~~~~~
+../src/Student_hackathon.c: In function ‘Add_Product_Category’:
+../src/Student_hackathon.c:120:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[20]’ [-Wformat=]
+   scanf("%s",&category);
+          ~^  ~~~~~~~~~
+../src/Student_hackathon.c: In function ‘Add_Product’:
+../src/Student_hackathon.c:152:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[20]’ [-Wformat=]
+   scanf("%s",&p.name);
+          ~^  ~~~~~~~
+../src/Student_hackathon.c:154:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[20]’ [-Wformat=]
+   scanf("%s",&p.category);
+          ~^  ~~~~~~~~~~~
+../src/Student_hackathon.c: In function ‘List_Products’:
+../src/Student_hackathon.c:188:20: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[20]’ [-Wformat=]
+    printf("\n%d\t %s \t\t %s \t\t %f",p.id,&p.name,&p.category,p.rate);
+                   ~^                       ~~~~~~~
+../src/Student_hackathon.c:188:28: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[20]’ [-Wformat=]
+    printf("\n%d\t %s \t\t %s \t\t %f",p.id,&p.name,&p.category,p.rate);
+                           ~^                       ~~~~~~~~~~~
+../src/Student_hackathon.c: In function ‘Find_Product_by_name’:
+../src/Student_hackathon.c:211:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[20]’ [-Wformat=]
+   scanf("%s",&pname);
+          ~^  ~~~~~~
+../src/Student_hackathon.c:215:14: warning: passing argument 1 of ‘strcmp’ from incompatible pointer type [-Wincompatible-pointer-types]
+    if(strcmp(&p.name,pname)==0)
+              ^
+In file included from ../src/Student_hackathon.c:13:0:
+/usr/include/string.h:136:12: note: expected ‘const char *’ but argument is of type ‘char (*)[20]’
+ extern int strcmp (const char *__s1, const char *__s2)
+            ^~~~~~
+../src/Student_hackathon.c:218:21: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[20]’ [-Wformat=]
+     printf("\n%d\t %s \t\t %s \t\t %f",p.id,&p.name,&p.category,p.rate);
+                    ~^                       ~~~~~~~
+../src/Student_hackathon.c:218:29: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[20]’ [-Wformat=]
+     printf("\n%d\t %s \t\t %s \t\t %f",p.id,&p.name,&p.category,p.rate);
+                            ~^                       ~~~~~~~~~~~
+../src/Student_hackathon.c: In function ‘sort_Product_By_Name’:
+../src/Student_hackathon.c:271:22: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[20]’ [-Wformat=]
+    printf("\n %d \t %s \t %s \t %f",arr[j].id,&arr[j].name,&arr[j].category,arr[j].rate);
+                     ~^                        ~~~~~~~~~~~~
+../src/Student_hackathon.c:271:28: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[20]’ [-Wformat=]
+    printf("\n %d \t %s \t %s \t %f",arr[j].id,&arr[j].name,&arr[j].category,arr[j].rate);
+                           ~^                               ~~~~~~~~~~~~~~~~
+../src/Student_hackathon.c:246:6: warning: unused variable ‘n’ [-Wunused-variable]
+  int n, i = 0;
+      ^
+../src/Student_hackathon.c: In function ‘sort_Product_By_Price’:
+../src/Student_hackathon.c:312:22: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[20]’ [-Wformat=]
+    printf("\n %d \t %s \t %s \t %f",arr[j].id,&arr[j].name,&arr[j].category,arr[j].rate);
+                     ~^                        ~~~~~~~~~~~~
+../src/Student_hackathon.c:312:28: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[20]’ [-Wformat=]
+    printf("\n %d \t %s \t %s \t %f",arr[j].id,&arr[j].name,&arr[j].category,arr[j].rate);
+                           ~^                               ~~~~~~~~~~~~~~~~
+../src/Student_hackathon.c:292:10: warning: unused variable ‘n’ [-Wunused-variable]
+  int i=0,n;
+          ^
+../src/Student_hackathon.c: In function ‘main’:
+../src/Student_hackathon.c:335:4: warning: implicit declaration of function ‘Customer’; did you mean ‘wcstombs’? [-Wimplicit-function-declaration]
+    Customer();
+    ^~~~~~~~
+    wcstombs
+../src/Student_hackathon.c:338:4: warning: implicit declaration of function ‘Admin’ [-Wimplicit-function-declaration]
+    Admin();
+    ^~~~~
+../src/Student_hackathon.c: At top level:
+../src/Student_hackathon.c:348:6: warning: conflicting types for ‘Customer’
+ void Customer(void)
+      ^~~~~~~~
+../src/Student_hackathon.c:335:4: note: previous implicit declaration of ‘Customer’ was here
+    Customer();
+    ^~~~~~~~
+../src/Student_hackathon.c:412:6: warning: conflicting types for ‘Admin’
+ void Admin(void)
+      ^~~~~
+../src/Student_hackathon.c:338:4: note: previous implicit declaration of ‘Admin’ was here
+    Admin();
+    ^~~~~
+Finished building: ../src/Student_hackathon.c
  
-Building target: write_textfile
-Invoking: GCC C Linker
-gcc  -o "write_textfile"  ./src/write_textfile.o   
-Finished building target: write_textfile
+Building target: Student_hackathon
+Invoking: Cross GCC Linker
+gcc  -o "Student_hackathon"  ./src/Student_hackathon.o   
+Finished building target: Student_hackathon
  
-11:48:49 **** Incremental Build of configuration Debug for project write_textfile ****
+13:38:24 **** Incremental Build of configuration Debug for project Student_hackathon ****
 make all 
 make: Nothing to be done for 'all'.

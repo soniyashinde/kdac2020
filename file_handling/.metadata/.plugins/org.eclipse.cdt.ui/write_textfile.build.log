@@ -1,6 +1,6 @@
-11:48:49 **** Incremental Build of configuration Debug for project write_textfile ****
+09:19:33 **** Incremental Build of configuration Debug for project write_textfile ****
 make all 
 make: Nothing to be done for 'all'.
 
-11:48:50 Build Finished. 0 errors, 0 warnings. (took 524ms)
+09:19:33 Build Finished. 0 errors, 0 warnings. (took 522ms)
 
