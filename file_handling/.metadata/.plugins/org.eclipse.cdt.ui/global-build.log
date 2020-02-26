@@ -1,13 +1,14 @@
-13:38:22 **** Incremental Build of configuration Debug for project Student_hackathon ****
+10:31:02 **** Incremental Build of configuration Debug for project Student_hackathon ****
 make all 
+make: Warning: File 'objects.mk' has modification time 10188 s in the future
 Building file: ../src/Student_hackathon.c
 Invoking: Cross GCC Compiler
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Student_hackathon.d" -MT"src/Student_hackathon.o" -o "src/Student_hackathon.o" "../src/Student_hackathon.c"
 ../src/Student_hackathon.c: In function ‘Register_customer’:
-../src/Student_hackathon.c:55:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
+../src/Student_hackathon.c:55:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[30]’ [-Wformat=]
    scanf("%s",&c.name);
           ~^  ~~~~~~~
-../src/Student_hackathon.c:57:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char **’ [-Wformat=]
+../src/Student_hackathon.c:57:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[30]’ [-Wformat=]
    scanf("%s",&c.address);
           ~^  ~~~~~~~~~~
 ../src/Student_hackathon.c: In function ‘Add_Product_Category’:
@@ -22,12 +23,12 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Student_hackathon.d" -M
    scanf("%s",&p.category);
           ~^  ~~~~~~~~~~~
 ../src/Student_hackathon.c: In function ‘List_Products’:
-../src/Student_hackathon.c:188:20: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[20]’ [-Wformat=]
-    printf("\n%d\t %s \t\t %s \t\t %f",p.id,&p.name,&p.category,p.rate);
-                   ~^                       ~~~~~~~
-../src/Student_hackathon.c:188:28: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[20]’ [-Wformat=]
-    printf("\n%d\t %s \t\t %s \t\t %f",p.id,&p.name,&p.category,p.rate);
-                           ~^                       ~~~~~~~~~~~
+../src/Student_hackathon.c:188:23: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[20]’ [-Wformat=]
+    printf("\n%-7d %-10s  %-10s  %f",p.id,&p.name,&p.category,p.rate);
+                   ~~~~^                  ~~~~~~~
+../src/Student_hackathon.c:188:30: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[20]’ [-Wformat=]
+    printf("\n%-7d %-10s  %-10s  %f",p.id,&p.name,&p.category,p.rate);
+                          ~~~~^                   ~~~~~~~~~~~
 ../src/Student_hackathon.c: In function ‘Find_Product_by_name’:
 ../src/Student_hackathon.c:211:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[20]’ [-Wformat=]
    scanf("%s",&pname);
@@ -46,44 +47,101 @@ In file included from ../src/Student_hackathon.c:13:0:
      printf("\n%d\t %s \t\t %s \t\t %f",p.id,&p.name,&p.category,p.rate);
                             ~^                       ~~~~~~~~~~~
 ../src/Student_hackathon.c: In function ‘sort_Product_By_Name’:
-../src/Student_hackathon.c:271:22: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[20]’ [-Wformat=]
-    printf("\n %d \t %s \t %s \t %f",arr[j].id,&arr[j].name,&arr[j].category,arr[j].rate);
-                     ~^                        ~~~~~~~~~~~~
-../src/Student_hackathon.c:271:28: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[20]’ [-Wformat=]
-    printf("\n %d \t %s \t %s \t %f",arr[j].id,&arr[j].name,&arr[j].category,arr[j].rate);
-                           ~^                               ~~~~~~~~~~~~~~~~
-../src/Student_hackathon.c:246:6: warning: unused variable ‘n’ [-Wunused-variable]
+../src/Student_hackathon.c:254:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[20]’ [-Wformat=]
+   scanf("%s",&category);
+          ~^  ~~~~~~~~~
+../src/Student_hackathon.c:270:23: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[20]’ [-Wformat=]
+    printf("\n%-7d %-10s  %-10s  %f",arr[j].id,&arr[j].name,&arr[j].category,arr[j].rate);
+                   ~~~~^                       ~~~~~~~~~~~~
+../src/Student_hackathon.c:270:30: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[20]’ [-Wformat=]
+    printf("\n%-7d %-10s  %-10s  %f",arr[j].id,&arr[j].name,&arr[j].category,arr[j].rate);
+                          ~~~~^                             ~~~~~~~~~~~~~~~~
+../src/Student_hackathon.c:240:6: warning: unused variable ‘n’ [-Wunused-variable]
   int n, i = 0;
       ^
 ../src/Student_hackathon.c: In function ‘sort_Product_By_Price’:
-../src/Student_hackathon.c:312:22: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[20]’ [-Wformat=]
-    printf("\n %d \t %s \t %s \t %f",arr[j].id,&arr[j].name,&arr[j].category,arr[j].rate);
-                     ~^                        ~~~~~~~~~~~~
-../src/Student_hackathon.c:312:28: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[20]’ [-Wformat=]
-    printf("\n %d \t %s \t %s \t %f",arr[j].id,&arr[j].name,&arr[j].category,arr[j].rate);
-                           ~^                               ~~~~~~~~~~~~~~~~
-../src/Student_hackathon.c:292:10: warning: unused variable ‘n’ [-Wunused-variable]
+../src/Student_hackathon.c:304:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[20]’ [-Wformat=]
+   scanf("%s",&category);
+          ~^  ~~~~~~~~~
+../src/Student_hackathon.c:318:23: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[20]’ [-Wformat=]
+    printf("\n%-7d %-10s  %-10s  %f",arr[j].id,&arr[j].name,&arr[j].category,arr[j].rate);
+                   ~~~~^                       ~~~~~~~~~~~~
+../src/Student_hackathon.c:318:30: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[20]’ [-Wformat=]
+    printf("\n%-7d %-10s  %-10s  %f",arr[j].id,&arr[j].name,&arr[j].category,arr[j].rate);
+                          ~~~~^                             ~~~~~~~~~~~~~~~~
+../src/Student_hackathon.c:291:10: warning: unused variable ‘n’ [-Wunused-variable]
   int i=0,n;
           ^
+../src/Student_hackathon.c: In function ‘order_item’:
+../src/Student_hackathon.c:347:11: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[20]’ [-Wformat=]
+   scanf("%s",&o.status);
+          ~^  ~~~~~~~~~
+../src/Student_hackathon.c: In function ‘pending_order’:
+../src/Student_hackathon.c:368:6: warning: unused variable ‘n’ [-Wunused-variable]
+  int n;
+      ^
+../src/Student_hackathon.c: In function ‘delivered_order’:
+../src/Student_hackathon.c:414:18: warning: unused variable ‘p’ [-Wunused-variable]
+   struct Product p;
+                  ^
+../src/Student_hackathon.c:412:7: warning: unused variable ‘n’ [-Wunused-variable]
+   int n;
+       ^
+../src/Student_hackathon.c: In function ‘List_Pending_Orders’:
+../src/Student_hackathon.c:483:54: warning: format ‘%s’ expects argument of type ‘char *’, but argument 6 has type ‘char (*)[20]’ [-Wformat=]
+      printf("\n%-5d \t\t %-5d \t \t%d \t %d \t\t %-10s \t %d/%d/%d",o.id,o.product_id,o.quantity,o.customer_id,&o.status,o.order_date.day,o.order_date.month,o.order_date.year);
+                                                  ~~~~^                                                         ~~~~~~~~~
+../src/Student_hackathon.c:461:7: warning: unused variable ‘n’ [-Wunused-variable]
+   int n;
+       ^
+../src/Student_hackathon.c: In function ‘List_delivered_Orders’:
+../src/Student_hackathon.c:522:55: warning: format ‘%s’ expects argument of type ‘char *’, but argument 6 has type ‘char (*)[20]’ [-Wformat=]
+       printf("\n%-5d \t\t %-5d \t \t%d \t %d \t\t %-10s \t %d/%d/%d",o.id,o.product_id,o.quantity,o.customer_id,&o.status,o.order_date.day,o.order_date.month,o.order_date.year);
+                                                   ~~~~^                                                         ~~~~~~~~~
+../src/Student_hackathon.c:500:8: warning: unused variable ‘n’ [-Wunused-variable]
+    int n;
+        ^
+../src/Student_hackathon.c: In function ‘Edit_Product’:
+../src/Student_hackathon.c:602:21: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[20]’ [-Wformat=]
+     printf("\n%d\t %s \t %s \t %f",p.id,&p.name,&p.category,p.rate);
+                    ~^                   ~~~~~~~
+../src/Student_hackathon.c:602:27: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘char (*)[20]’ [-Wformat=]
+     printf("\n%d\t %s \t %s \t %f",p.id,&p.name,&p.category,p.rate);
+                          ~^                     ~~~~~~~~~~~
+../src/Student_hackathon.c:606:13: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[20]’ [-Wformat=]
+     scanf("%s",&p.name);
+            ~^  ~~~~~~~
+../src/Student_hackathon.c:608:13: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[20]’ [-Wformat=]
+     scanf("%s",&p.category);
+            ~^  ~~~~~~~~~~~
+../src/Student_hackathon.c: In function ‘Dispatch_order’:
+../src/Student_hackathon.c:657:14: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[20]’ [-Wformat=]
+      scanf("%s",&o.status);
+             ~^  ~~~~~~~~~
 ../src/Student_hackathon.c: In function ‘main’:
-../src/Student_hackathon.c:335:4: warning: implicit declaration of function ‘Customer’; did you mean ‘wcstombs’? [-Wimplicit-function-declaration]
+../src/Student_hackathon.c:697:4: warning: implicit declaration of function ‘Customer’; did you mean ‘wcstombs’? [-Wimplicit-function-declaration]
     Customer();
     ^~~~~~~~
     wcstombs
-../src/Student_hackathon.c:338:4: warning: implicit declaration of function ‘Admin’ [-Wimplicit-function-declaration]
+../src/Student_hackathon.c:700:4: warning: implicit declaration of function ‘Admin’ [-Wimplicit-function-declaration]
     Admin();
     ^~~~~
 ../src/Student_hackathon.c: At top level:
-../src/Student_hackathon.c:348:6: warning: conflicting types for ‘Customer’
+../src/Student_hackathon.c:710:6: warning: conflicting types for ‘Customer’
  void Customer(void)
       ^~~~~~~~
-../src/Student_hackathon.c:335:4: note: previous implicit declaration of ‘Customer’ was here
+../src/Student_hackathon.c:697:4: note: previous implicit declaration of ‘Customer’ was here
     Customer();
     ^~~~~~~~
-../src/Student_hackathon.c:412:6: warning: conflicting types for ‘Admin’
+../src/Student_hackathon.c: In function ‘Customer’:
+../src/Student_hackathon.c:715:6: warning: unused variable ‘n’ [-Wunused-variable]
+  int n,custid;
+      ^
+../src/Student_hackathon.c: At top level:
+../src/Student_hackathon.c:800:6: warning: conflicting types for ‘Admin’
  void Admin(void)
       ^~~~~
-../src/Student_hackathon.c:338:4: note: previous implicit declaration of ‘Admin’ was here
+../src/Student_hackathon.c:700:4: note: previous implicit declaration of ‘Admin’ was here
     Admin();
     ^~~~~
 Finished building: ../src/Student_hackathon.c
@@ -93,6 +151,9 @@ Invoking: Cross GCC Linker
 gcc  -o "Student_hackathon"  ./src/Student_hackathon.o   
 Finished building target: Student_hackathon
  
-13:38:24 **** Incremental Build of configuration Debug for project Student_hackathon ****
+make: warning:  Clock skew detected.  Your build may be incomplete.
+10:31:03 **** Incremental Build of configuration Debug for project Student_hackathon ****
 make all 
+make: Warning: File 'objects.mk' has modification time 10186 s in the future
+make: warning:  Clock skew detected.  Your build may be incomplete.
 make: Nothing to be done for 'all'.
